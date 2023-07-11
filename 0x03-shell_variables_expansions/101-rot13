@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello, World!" | tr 'A-Za-z' 'N-ZA-Mn-za-m' | tee >(yes | head -n 10)
+cat quote | tr 'A-Za-z' 'N-ZA-Mn-za-m'
