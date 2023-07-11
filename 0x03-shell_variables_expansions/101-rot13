@@ -1,2 +1,2 @@
 #!/bin/bash
-cnfgr - - | phg -q$'\g' -s1
+echo "Hello, World!" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
