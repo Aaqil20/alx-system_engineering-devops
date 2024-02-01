@@ -36,16 +36,16 @@ defaults
 frontend  ollyjhay-frontend
         bind *:80
         mode http
-        bind *:443 ssl crt /etc/haproxy/certs/www.ollyjhay.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.github20.tech.pem
         redirect scheme https if !{ ssl_fc }
-        default_backend ollyjhay-backend
-backend ollyjhay-backend
+        default_backend github20-backend
+backend github20-backend
         balance roundrobin
-        server 93511-web-01 35.174.209.1:80 check
-        server 93511-web-02 35.153.52.94:80 check
+        server 469897-web-01 34.227.89.87:80 check
+        server 469897-web-02 54.90.4.233:80 check
 
 listen http-in
         bind :80
         balance roundrobin
-        server 93511-web-01 35.174.209.1:80 check
-        server 93511-web-02 35.153.52.94:80 check
+        server 469897-web-01 34.227.89.87:80 check
+        server 469897-web-02 54.90.4.233:80 check
