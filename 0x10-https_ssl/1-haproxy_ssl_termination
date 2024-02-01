@@ -33,10 +33,10 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  ollyjhay-frontend
+frontend  github20-frontend
         bind *:80
         mode http
-        bind *:443 ssl crt /etc/haproxy/certs/www.github20.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.github20.tech.com
         redirect scheme https if !{ ssl_fc }
         default_backend github20-backend
 backend github20-backend
